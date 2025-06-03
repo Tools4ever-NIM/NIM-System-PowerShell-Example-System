@@ -112,7 +112,7 @@ function Idm-SystemInfo {
     # It's good practice to log invocation of each function.
     #
 
-    Log info "-Connection=$Connection -TestConnection=$TestConnection -Configuration=$Configuration -ConnectionParams='$ConnectionParams'"
+    Log verbose "-Connection=$Connection -TestConnection=$TestConnection -Configuration=$Configuration -ConnectionParams='$ConnectionParams'"
     
     if ($Connection) {
         #
@@ -314,7 +314,7 @@ function Idm-SystemInfo {
         )
     }
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 
@@ -375,7 +375,7 @@ function Idm-MyClassRead {
     # It's good practice to log invocation of each function.
     #
 
-    Log info "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
+    Log verbose "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
 
     if ($GetMeta) {
         #
@@ -419,7 +419,7 @@ function Idm-MyClassRead {
         $output
     }
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 
@@ -436,7 +436,7 @@ function Idm-UsersRead {
     # This is an example function
     #
 
-    Log info "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
+    Log verbose "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
 
     if ($GetMeta) {
         #
@@ -466,7 +466,7 @@ function Idm-UsersRead {
         )
     }
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 
@@ -483,7 +483,7 @@ function Idm-GroupsRead {
     # This is an example function
     #
 
-    Log info "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
+    Log verbose "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
 
     if ($GetMeta) {
         #
@@ -507,7 +507,7 @@ function Idm-GroupsRead {
         )
     }
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 
@@ -524,7 +524,7 @@ function Idm-MembershipsRead {
     # This is an example function
     #
 
-    Log info "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
+    Log verbose "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
 
     if ($GetMeta) {
         #
@@ -554,7 +554,7 @@ function Idm-MembershipsRead {
         )
     }
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 
@@ -641,7 +641,7 @@ function Idm-MyClassMyOperation {
     # It's good practice to log invocation of each function.
     #
 
-    Log info "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
+    Log verbose "-GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
 
     if ($GetMeta) {
         #
@@ -685,7 +685,7 @@ function Idm-MyClassMyOperation {
         # Perform operation here...
     }
 
-    Log info "Done"
+    Log verbose "Done"
 }
 
 
@@ -740,7 +740,7 @@ function Idm-Dispatcher {
     # It's good practice to log invocation of each function.
     #
 
-    Log info "-Class='$Class' -Operation='$Operation' -GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
+    Log verbose "-Class='$Class' -Operation='$Operation' -GetMeta=$GetMeta -SystemParams='$SystemParams' -FunctionParams='$FunctionParams'"
 
     if ($Class -eq '') {
 
@@ -850,5 +850,5 @@ function Idm-Dispatcher {
 
     }
 
-    Log info "Done"
+    Log verbose "Done"
 }
